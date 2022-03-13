@@ -3,8 +3,8 @@ on:
   push
 
 jobs:
-  build-windows:
-    runs-on: windows-2019
+  build-macos:
+    runs-on: macos-11
     steps:
       - uses: actions/checkout@v2
       
@@ -23,13 +23,13 @@ jobs:
         run: |
           python -m nuitka \
             --standalone \
+            --plugin-enable=numpy \
             --assume-yes-for-downloads \
-            --msvc=14.2 \
             --follow-imports \
             --no-prefer-source-code \
             main.py
 
-      - name: test main.exe
+      - name: test binary
         shell: bash
         working-directory: main.dist
-        run: ./main.exe
+        run: ./main
