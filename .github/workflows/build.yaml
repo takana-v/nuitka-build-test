@@ -24,6 +24,7 @@ jobs:
           python -m nuitka \
             --standalone \
             --plugin-enable=numpy \
+            --assume-yes-for-downloads \
             --follow-imports \
             --no-prefer-source-code \
             main.py
