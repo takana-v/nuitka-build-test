@@ -4,7 +4,7 @@ on:
 
 jobs:
   build-windows:
-    runs-on: windows-2019
+    runs-on: macos-11
     steps:
       - uses: actions/checkout@v2
       
@@ -23,8 +23,7 @@ jobs:
         run: |
           python -m nuitka \
             --standalone \
-            --assume-yes-for-downloads \
-            --msvc=14.2 \
+            --plugin-enable=numpy \
             --follow-imports \
             --no-prefer-source-code \
             main.py
