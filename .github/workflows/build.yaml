@@ -28,7 +28,7 @@ jobs:
             --no-prefer-source-code \
             main.py
 
-      - name: test main.exe
+      - name: test binary
         shell: bash
         working-directory: main.dist
-        run: ./main.exe
+        run: ./main
