@@ -30,7 +30,6 @@ jobs:
             --assume-yes-for-downloads \
             --follow-imports \
             --no-prefer-source-code \
-            --follow-import-to=numpy \
             main.py
 
       - name: test binary

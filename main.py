@@ -1,4 +1,3 @@
-import numpy
-from scipy.signal import resample
+import scipy.signal
 
-resample([0], 1)
+print(scipy.signal)
