@@ -31,6 +31,7 @@ jobs:
             --no-prefer-source-code \
             --follow-import-to=numpy \
             --include-package-data=scipy \
+            --include-data-file=${{ env.pythonLocation }}/lib/python*/site-packages/scipy/.dylibs/*.dylib=./scipy/.dylibs/ \
             main.py
 
       - name: test binary

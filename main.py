@@ -1,3 +1,4 @@
-import scipy
+import numpy
+from scipy.signal import resample
 
-print(scipy.__version__)
+resample([0], 1)
