@@ -22,6 +22,7 @@ jobs:
 
       - name: build main.py
         shell: bash
+
         run: |
           python -m nuitka \
             --standalone \
@@ -30,8 +31,6 @@ jobs:
             --follow-imports \
             --no-prefer-source-code \
             --follow-import-to=numpy \
-            --include-package-data=scipy \
-            --include-data-file=${{ env.pythonLocation }}/lib/python*/site-packages/scipy/.dylibs/*.dylib=./scipy/.dylibs/ \
             main.py
 
       - name: test binary
