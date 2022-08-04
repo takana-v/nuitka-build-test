@@ -1,3 +1,3 @@
-import scipy.signal
+import numpy
 
-print(scipy.signal)
+print(numpy.__version__)
