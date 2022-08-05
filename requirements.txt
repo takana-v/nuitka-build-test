@@ -1,2 +1,2 @@
-nuitka==1.0.0
+nuitka==1.0.1
 numpy==1.23.1
